@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="forms.Controler">
+   <children>
+      <Label text="Identité">
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <VBox prefHeight="261.0" prefWidth="600.0" style="-fx-border-radius: 20px; -fx-border-width: 2px; -fx-border-color: Black;">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" text="Nom* :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets right="36.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nom" onKeyTyped="#textLimit" prefHeight="26.0" prefWidth="149.0" promptText="Vialat">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" text="Prenom* :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="prenom" onKeyTyped="#textLimit" promptText="Jean-Christphe">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <GridPane prefHeight="42.0" prefWidth="216.0" vgap="20.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.20001220703125" minWidth="10.0" prefWidth="78.8000244140625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="543.200023651123" minWidth="10.0" prefWidth="477.1999755859375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextField fx:id="addresse1" prefHeight="26.0" prefWidth="0.0" promptText="12 rue de l'Exemple" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER" text="Addresse*" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+                  <TextField fx:id="addresse2" prefHeight="94.0" prefWidth="540.0" promptText="Rez de chaussé à droit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </GridPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" text="Code Postal :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="codep" prefHeight="26.0" prefWidth="48.0" promptText="75000">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" text="Ville :" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="ville" prefHeight="26.0" prefWidth="174.0" promptText="Saint-Denis De Villegeant">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" text="Telephone" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets right="18.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tel" prefHeight="26.0" prefWidth="114.0" promptText="+33 6 12 34 56 78">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="58.0" text="E-Mail" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="email" prefHeight="26.0" prefWidth="500.0" promptText="exemple.nom.prenom@exemple.fr">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </VBox>
+      <Label text="Abonnement">
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-width: 2px; -fx-border-radius: 20px; -fx-border-color: black;">
+         <children>
+            <RadioButton fx:id="formuleA" mnemonicParsing="false" selected="true" text="Formule maxi-moula (7815€/jour)">
+               <toggleGroup>
+                  <ToggleGroup fx:id="b" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="formueB" mnemonicParsing="false" text="Formule rat (1€/ans)" toggleGroup="$b">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </VBox>
+      <Label text="Règlement">
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-width: 2px; -fx-border-color: Black; -fx-border-radius: 20px;">
+         <children>
+            <RadioButton fx:id="prelevement" mnemonicParsing="false" selected="true" text="Prélèvement">
+               <toggleGroup>
+                  <ToggleGroup fx:id="a" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="cheque" mnemonicParsing="false" text="Chèque" toggleGroup="$a">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox prefHeight="73.0" prefWidth="600.0">
+         <children>
+            <CheckBox fx:id="acceptation" mnemonicParsing="false" text="Accepté de recevoir du spam de pub qui vous fera chier mais tkt c pour la tune* (même si tu accepte pas on te bonbarde quand même)">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </CheckBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </opaqueInsets>
+      </VBox>
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="envoyer" defaultButton="true" mnemonicParsing="false" onAction="#envoyer" text="Envoyer">
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="annuler" cancelButton="true" mnemonicParsing="false" onAction="#annuler" text="Annuler">
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <VBox.margin>
+      <Insets left="10.0" right="10.0" />
+   </VBox.margin>
+</VBox>
